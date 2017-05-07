@@ -9,7 +9,7 @@ require_once("Principal.php");
 
 	for ($i=0; $i < $_POST["restricoes"]; $i++) { 
 		for ($j=0; $j < $_POST["variaveis"]; $j++) { 
-			echo "<input type='text' name='x$i'> x$i";
+			echo "<input type='text' name='x$j'> x$j";
 		}
 			echo "<= <input type='text' name=''> </br>";
 	}
