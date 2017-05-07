@@ -1,0 +1,50 @@
+body{
+	font-family: 'Ubuntu', sans-serif;
+}
+.list-passos{
+	display: flex!important;
+	list-style: none!important;
+	justify-content: space-around!important;
+	padding:  0;
+}
+.RestriVars{
+    align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+.RestriVars label{
+	margin: 15px 0;
+}
+.RestriVars label input{
+	height: 30px;
+}
+form.form-control{
+	height: auto!important;
+}
+form.form-control input{
+	border: solid 1px #cccccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	padding: 0 0 0 15px;
+}
+.btn-enviar{
+	border: none;
+	background: #5cb85c;
+	color: #fff;
+	font-weight: 500;
+	height: 40px;
+	letter-spacing: 1.5px;
+	width:  10%;
+}
+input[type="text"]::-webkit-input-placeholder{
+	font-family: 'Ubuntu', sans-serif;	
+	font-weight: 300;	
+ }
+input[type="text"]:-moz-placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}
+input[type="text"]:-moz-placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}​
