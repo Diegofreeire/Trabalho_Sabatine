@@ -10,12 +10,13 @@ require_once("Principal.php");
 
 	for ($i=0; $i < $_POST["restricoes"]; $i++) { 
 		for ($j=0; $j < $_POST["variaveis"]; $j++) { 
-			echo "<input type='text' name='x$j' id='x$i$j'> x$j";
+			echo "<input type='text' name='x$i$j'> x$j";
 		}
-			echo "<= <input type='text' name='' id='b$i%j'> </br>";
+			echo "<= <input type='text' name='b$i$j' id='b$i%j'> </br>";
 	}
  ?>
-
+<input type="hidden" name="variaveis" value="<?=$_POST['variaveis']?>">
+<input type="hidden" name="restricoes" value="<?=$_POST['restricoes']?>">
  <input type="submit" name="" class="btn btn-primary">
 </form>
 

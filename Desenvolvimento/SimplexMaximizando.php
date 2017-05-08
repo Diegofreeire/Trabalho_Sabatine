@@ -1,8 +1,8 @@
 <?php 
-$vetor;
-for ($i=0; $i < $_POST["restricoes"]; $i++) { 
+$vetor = array();
+for ($i=0; $i < $_POST['restricoes']; $i++) { 
 	for ($j=0; $j < $_POST["variaveis"]; $j++) { 
-		$vetor = array("x$i" => $_POST["x$i$j"]);
+		array_push($vetor, array("x$i" => $_POST["x$i$j"]));
 	}	
 }
 
@@ -10,7 +10,7 @@ $continuar = true;
 //while($continuar){
 
 
-	$vetor = array("x0" => array(1,2,-3),
+	/*$vetor = array("x0" => array(1,2,-3),
 		"x1" => array(1,2,-4),
 		"x2" => array(1,2,-5),
 		"x3" => array(1,0,0),
