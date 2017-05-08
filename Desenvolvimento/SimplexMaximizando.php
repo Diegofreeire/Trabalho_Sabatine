@@ -1,8 +1,28 @@
 <?php 
 $vetor = array();
 for ($i=0; $i < $_POST['restricoes']; $i++) { 
-	for ($j=0; $j < $_POST["variaveis"]; $j++) { 
-		array_push($vetor, array("x$i" => $_POST["x$i$j"]));
+	for ($j=0; $j < $_POST["variaveis"]; $j++) {
+		$vetor["x$j"]["$i"] = $_POST["x$i$j"];
+	}	
+}
+
+for ($i=count($vetor), $n = 0; $n < $_POST['restricoes']; $i++, $n++) { 
+	for ($j=0; $j < $_POST["restricoes"]; $j++) {
+		if ($j == $n) {
+			$vetor["x$i"]["$j"] = 1;
+		}else{
+			$vetor["x$i"]["$j"] = 0;
+		}		
+	}
+}
+$tamanhoVetor = (count($vetor));
+for ($i=0; $i < $_POST['restricoes']; $i++) { 
+	for ($j=0; $j < $_POST["restricoes"]; $j++) {
+		for ($k=0; $k < $tamanhoVetor; $k++) {
+			if ($j == $i) {
+				$vetor["l$i"]["$k"] = $vetor["x$k"]["$j"];
+			}	
+		}
 	}	
 }
 
@@ -38,6 +58,9 @@ $continuar = true;
 	<title></title>
 </head>
 <body>
-<?php var_dump($vetor); ?>
+<pre>
+	<?php var_dump($vetor); ?>
+</pre>
+
 </body>
 </html>
