@@ -26,6 +26,8 @@ for ($i=0; $i < $_POST['restricoes']; $i++) {
 	}	
 }
 
+$a = min($vetor["l3"]);
+
 $continuar = true;
 //while($continuar){
 
@@ -60,6 +62,8 @@ $continuar = true;
 <body>
 <pre>
 	<?php var_dump($vetor); ?>
+<?php var_dump($a); ?>
+
 </pre>
 
 </body>
