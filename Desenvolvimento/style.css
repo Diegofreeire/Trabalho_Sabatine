@@ -1,3 +1,6 @@
+/*
+	Pagina Principal
+*/
 body{
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -48,3 +51,9 @@ input[type="text"]:-moz-placeholder {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 }​
+
+/*
+	Pagina Definir Tamanho
+*/
+*{background: #000}
+
