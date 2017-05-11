@@ -1,7 +1,7 @@
 <?php
 	include"Principal.html";
 ?>
-	<div class="container">
+	<div class="container" >
 		<section class="tabelaRestricao">
 			<form method="POST" action="SimplexMaximizando.php">
 				<?php

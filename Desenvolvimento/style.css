@@ -1,6 +1,5 @@
-/*
-	Pagina Principal
-*/
+
+/*pagina principal*/
 body{
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -39,6 +38,26 @@ form.form-control input{
 	letter-spacing: 1.5px;
 	width:  10%;
 }
+
+/*pagina Definir Tamanho*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*colocar TODO O CSS ANTES DO WEB-KIT*/
 input[type="text"]::-webkit-input-placeholder{
 	font-family: 'Ubuntu', sans-serif;	
 	font-weight: 300;	
@@ -52,8 +71,5 @@ input[type="text"]:-moz-placeholder {
 	font-weight: 300;
 }​
 
-/*
-	Pagina Definir Tamanho
-*/
-*{background: #000}
+
 
