@@ -1,0 +1,109 @@
+
+/*pagina principal*/
+body{
+	font-family: 'Ubuntu', sans-serif;
+}
+#header{
+	margin:15px;
+}
+.list-passos{
+	display: flex!important;
+	list-style: none!important;
+	justify-content: space-around!important;
+	padding:  0;
+}
+
+.list-passos li span a{
+	color: #555; 
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.RestriVars{
+    align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+.RestriVars label{
+	margin: 15px 0;
+}
+.RestriVars label input{
+	height: 30px;
+}
+form.form-control{
+	height: auto!important;
+}
+form.form-control input{
+	border: solid 1px #cccccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	padding: 0 0 0 15px;
+}
+.btn-enviar{
+	border: none;
+	background: #5cb85c;
+	color: #fff;
+	font-weight: 500;
+	height: 40px;
+	letter-spacing: 1.5px;
+	width:  10%;
+}
+
+/*pagina Definir Tamanho*/
+.tabelaRestricao{
+	border:  solid 1px #ccc;
+	border-radius:  4px;
+	padding: 15px;
+	margin: 15px 0;
+}
+
+.tabelaRestricao form{
+	color: #555;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.tabelaRestricao form input{
+	margin:  10px 2px;
+}
+
+.back{
+	border: none;
+	background: #e7e7e7;
+	color: #555;
+	font-weight: 500;
+	height: 40px;
+	letter-spacing: 1.5px;
+	margin-top:  10px;
+	width:  10%;
+}
+
+.next{
+	border: none;
+	background: #5cb85c;
+	color: #fff;
+	float: right;
+	font-weight: 500;
+	height: 40px;
+	letter-spacing: 1.5px;
+	width:  10%;
+}
+
+
+
+/*colocar TODO O CSS ANTES DO WEB-KIT*/
+input[type="text"]::-webkit-input-placeholder{
+	font-family: 'Ubuntu', sans-serif;	
+	font-weight: 300;	
+ }
+input[type="text"]:-moz-placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}
+input[type="text"]:-moz-placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}​
+
+
+
