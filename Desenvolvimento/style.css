@@ -4,7 +4,7 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 #header{
-	margin:15px;
+	margin:15px 0;
 }
 .list-passos{
 	display: flex!important;
@@ -41,16 +41,20 @@ form.form-control input{
 }
 .btn-enviar{
 	border: none;
-	background: #5cb85c;
+	background: #28a745;
+	background-image: -webkit-linear-gradient(270deg, #34d058 0%, #28a745 90%);
+	background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+	border: 1px solid rgba(27,31,35,0.2);
+	border-radius: 2px;
 	color: #fff;
 	font-weight: 500;
 	height: 40px;
 	letter-spacing: 1.5px;
-	width:  10%;
 }
 
 /*pagina Definir Tamanho*/
 .tabelaRestricao{
+	background: #f6f8fa;
 	border:  solid 1px #ccc;
 	border-radius:  4px;
 	padding: 15px;
@@ -69,8 +73,11 @@ form.form-control input{
 
 .back{
 	border: none;
-	background: #e7e7e7;
-	color: #555;
+	background: #eff3f6;
+	background-image: -webkit-linear-gradient(270deg, #fafbfc 0%, #eff3f6 90%);
+	background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+	border: 1px solid rgba(27,31,35,0.2);
+	color: #24292e;
 	font-weight: 500;
 	height: 40px;
 	letter-spacing: 1.5px;
@@ -80,13 +87,16 @@ form.form-control input{
 
 .next{
 	border: none;
-	background: #5cb85c;
+	background: #28a745;
+	background-image: -webkit-linear-gradient(270deg, #34d058 0%, #28a745 90%);
+	background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+	border: 1px solid rgba(27,31,35,0.2);
+	border-radius: 2px;
 	color: #fff;
-	float: right;
 	font-weight: 500;
+	float: right;
 	height: 40px;
 	letter-spacing: 1.5px;
-	width:  10%;
 }
 
 
