@@ -40,44 +40,73 @@ for ($i=0; $i < $_POST['restricoes']; $i++) { //gerando as linhas
 		}
 	}	
 }
-//pegar coluna do pivo
-$a = min($vetor["z"]);
-
-$coluna;
-for ($i=0; $i < $vetor["z"]; $i++) {
-	if($a == $vetor["z"]["$i"]){
-		$coluna = $i;
-		break;
-	}
-}
-//multiplicar coluna do pivo por b
 $b = array();
-for ($i=0; $i < count($vetor["b"]); $i++) { 
-	$b[$i] = $vetor["b"]["$i"] * $vetor["x$coluna"]["$i"];
-}
-//pegar linha do pivo
-$colunaB = min($b);
-$linha;
-for ($i=0; $i < $b; $i++) {
-	if($colunaB == $b["$i"]){
-		$linha = $i;
-		break;
-	}
-}
-
-$pivo["linha"] = $linha;
-$pivo["coluna"] = $coluna;
-
-
-
 
 $continuar = true;
 while($continuar){
+	//pegar coluna do pivo
+	$a = min($vetor["z"]);
+
+	$coluna;
+	for ($i=0; $i < $vetor["z"]; $i++) {
+		if($a == $vetor["z"]["$i"]){
+			$coluna = $i;
+			break;
+		}
+	}
+	//multiplicar coluna do pivo por b
+
+	for ($i=0; $i < count($vetor["b"]); $i++) { 
+		$b[$i] = $vetor["b"]["$i"] * $vetor["x$coluna"]["$i"];
+	}
+	//pegar linha do pivo
+	$colunaB = min($b);
+	$linha;
+	for ($i=0; $i < $b; $i++) {
+		if($colunaB == $b["$i"]){
+			$linha = $i;
+			break;
+		}
+	}
+
+	//Pivo
+	$pivoLinha = $linha;
+	$pivoColuna = $coluna;
+	$valorPivo = $vetor["l$pivoLinha"]["$pivoColuna"];
+
+	//realizar cálculo da linha do pivo
+	for ($i=0; $i < count($vetor["z"]); $i++) { 
+		$vetor["l$pivoLinha"]["$i"] = $valorPivo;
+	}
+
+	//anular os valores da coluna do pivo linha * - valor da coluna do pivo
+	$valorColunaPivo;
+
+	for ($i=0; $i < count($vetor["x0"])-1; $i++) { 
+		if("l$i" != "l$pivoLinha")
+		{
+			$valorColunaPivo = $vetor["l$i"]["$pivoColuna"];
+			if ($valorColunaPivo != 0) {
+				for ($j=0; $j < count($vetor["z"]); $j++) { 
+					$vetor["l$i"]["$j"] = ($vetor["l$pivoLinha"]["$j"] * (-($valorColunaPivo))) + $vetor["l$i"]["$j"];
+				}
+			}		
+		}
+	}
+	for ($i=0; $i < count($vetor["x0"])-1; $i++) { 
+		$valorColunaPivo = $vetor["z"]["$pivoColuna"];
+		if ($valorColunaPivo != 0) {
+			for ($j=0; $j < count($vetor["z"]); $j++) { 
+				$vetor["z"]["$j"] = ($vetor["l$pivoLinha"]["$j"] * (-($valorColunaPivo))) + $vetor["z"]["$j"];
+			}
+		}
+	}
 
 	//condição de parada por solução ótima da linha de Z
 	foreach ($vetor["z"] as $v => $c) {
 		if($c < 0){
 			$continuar = true;
+			break;
 		}else{
 			$continuar = false;
 		}
@@ -97,7 +126,6 @@ while($continuar){
 <h1>Vetor Posicoes</h1>	
 	<?php var_dump($vetor); ?>
 <h1>Vetor Base</h1>	
-	<?php var_dump($b); ?>
 <h1>Vetor Pivo</h1>	
 	<?= var_dump($pivo)?>
 
