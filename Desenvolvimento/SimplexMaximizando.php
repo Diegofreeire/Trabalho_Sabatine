@@ -14,7 +14,7 @@ $k;
 $j;
 for ($j=0; $j < $_POST["variaveis"]; $j++) { 
 	if($vetor["x$j"]){		
-		for ($k=0; $k < $_POST['restricoes']; $k++) {
+		for ($k=0; $k < $_POST['variaveis']; $k++) {
 			if ($_POST["x$k"]) {
 				if ($k == $j) {
 					$vetor["x$j"]["$i"] = $_POST["x$k"];
@@ -30,7 +30,7 @@ $qtdNaoBasicas = count($vetor);//variaveis da solução
 
 //gerar valores das variaveis de folga, valores das variáveis F, porém para melhor implementação continuara com X
 for ($i = $qtdNaoBasicas, $n = 0; $n < $_POST['restricoes']; $i++, $n++) {
-	$base = "x$i";
+	$base["$i"] = "x$i";
 	for ($j=0; $j < $_POST["restricoes"]+1; $j++) {
 		if ($j == $n) {
 			$vetor["x$i"]["$j"] = 1;
@@ -89,7 +89,6 @@ while($continuar){
 	$a = $vetor["l$linhaZ"]["0"];
 
 	$coluna;
-	//ERRO ESTA PROVAVELMENTE QUANDO ESTA FAZENDO O PIVO
 	for ($i=0; $i < count($vetor["l$linhaZ"])-1; $i++) {
 		if(($a >= $vetor["l$linhaZ"]["$i"]) && $vetor["l$linhaZ"]["$i"] < 0){
 			$a = $vetor["l$linhaZ"]["$i"];

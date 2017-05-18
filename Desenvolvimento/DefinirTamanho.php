@@ -9,7 +9,7 @@
 				for ($i=0; $i < $_POST["variaveis"]; $i++) {
 						echo "<input type='text' class='form-control' name='x$i' id='x$i'>x$i ";
 				}
-
+				
 				echo "</br>Restrições :</br>";
 					for ($i=0; $i < $_POST["restricoes"]; $i++) {
 						for ($j=0; $j < $_POST["variaveis"]; $j++) {
