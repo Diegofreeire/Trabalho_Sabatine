@@ -30,7 +30,7 @@ $qtdNaoBasicas = count($vetor);//variaveis da solução
 
 //gerar valores das variaveis de folga, valores das variáveis F, porém para melhor implementação continuara com X
 for ($i = $qtdNaoBasicas, $n = 0; $n < $_POST['restricoes']; $i++, $n++) {
-	$base["$i"] = "x$i";
+	$base["$n"] = "x$i";//base recebendo as variáveis iniciais
 	for ($j=0; $j < $_POST["restricoes"]+1; $j++) {
 		if ($j == $n) {
 			$vetor["x$i"]["$j"] = 1;
@@ -39,7 +39,7 @@ for ($i = $qtdNaoBasicas, $n = 0; $n < $_POST['restricoes']; $i++, $n++) {
 		}
 	}
 }
-var_dump($base);
+
 //pegar o tamanho do vetor apenas com as variaveis, sem b
 $tamanhoVetor = (count($vetor));
 
@@ -115,6 +115,11 @@ while($continuar){
 	}
 	echo "$cB";
 
+	for ($trocaC=0; $trocaC < count($base); $trocaC++) { 
+		if($trocaC == $linha){
+			$base["$trocaC"] = "x$coluna";
+		}
+	}
 
 	//Pivo
 	$pivoLinha = $linha;
@@ -173,7 +178,8 @@ while($continuar){
 <pre>
 <h1>Vetor Posicoes</h1>	
 	<?php var_dump($vetor); ?>
-<h1>Vetor B</h1>	
+<h1>Vetor Base</h1>	
+	<?=var_dump($base);?>
 <h1>Vetor Pivo</h1>	
 
 </pre>
