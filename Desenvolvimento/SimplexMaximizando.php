@@ -49,7 +49,10 @@ for ($i=0; $i < $_POST['restricoes']; $i++) {
 }	
 
 $vetor["x$tamanhoVetor"]["$i"] = "0";
+
+//COLUNA DE B
 $colunaB = $tamanhoVetor;
+
 $tamanhoSolucao = count($vetor);
 $tamanhoColuna = count($vetor["x0"]);
 
@@ -67,11 +70,10 @@ for ($i=0; $i < $tamanhoSolucao; $i++) {
 	}
 }
 
-
-
 $i;
 $linhaZ = $tamanhoLinha - 1;
 $min = 1;
+
 //caso minimizar, inverter solução
 if ($_POST['objetivo'] == 2) {
 		$min = -1;
@@ -86,15 +88,15 @@ for ($j=0; $j < count($vetor["l$linhaZ"])-1; $j++) {
 	$vetor["l$linhaZ"]["$j"] = $vetor["l$linhaZ"]["$j"] * -1;
 }
 
-
-	for ($i=0; $i < count($vetor["l$linhaZ"]) - 1; $i++) { 
-		if($vetor["l$linhaZ"]["$i"] < 0){
-			$continuar = true;
-			break;
-		}else{
-			$continuar = false;
-		}
+for ($i=0; $i < count($vetor["l$linhaZ"]) - 1; $i++) { 
+	if($vetor["l$linhaZ"]["$i"] < 0){
+		$continuar = true;
+		break;
+	}else{
+		$continuar = false;
 	}
+}
+
 //realizar controle de limite
 $limiteMaximo = 20;
 $maximo = 0;
@@ -116,9 +118,7 @@ while($continuar && $maximo < $limiteMaximo){
 	//multiplicar coluna do pivo por b
 	for ($i=0; $i < count($vetor["x$colunaB"]); $i++) { 
 		$b["$i"] = $vetor["l$i"]["$coluna"] * $vetor["l$i"]["$colunaB"];
-		var_dump($vetor["l$i"]["$coluna"]);
 	}
-	var_dump($b);
 
 	//pegar linha do pivo
 	$cB = $b["0"];
@@ -129,7 +129,6 @@ while($continuar && $maximo < $limiteMaximo){
 			$linha = $i;
 		}
 	}
-	echo "$cB";
 
 	for ($trocaC=0; $trocaC < count($base); $trocaC++) { 
 		if($trocaC == $linha){
@@ -141,10 +140,7 @@ while($continuar && $maximo < $limiteMaximo){
 	$pivoLinha = $linha;
 	$pivoColuna = $coluna;
 	$valorPivo = $vetor["l$pivoLinha"]["$pivoColuna"];
-	echo "$valorPivo";
-	echo "$pivoColuna";
-	echo "$pivoLinha";
-	echo "$linhaZ";
+
 	//realizar cálculo da linha do pivo
 	for ($i=0; $i < count($vetor["l$linhaZ"]); $i++) { 
 		$vetor["l$pivoLinha"]["$i"] = $vetor["l$pivoLinha"]["$i"]/$valorPivo;
@@ -157,12 +153,12 @@ while($continuar && $maximo < $limiteMaximo){
 		if("l$i" != "l$pivoLinha")
 		{
 			$valorColunaPivo = $vetor["l$i"]["$pivoColuna"];
-			echo "$valorColunaPivo";
 				for ($j=0; $j < count($vetor["l$linhaZ"]); $j++) { 
 					$vetor["l$i"]["$j"] = (($vetor["l$pivoLinha"]["$j"] * (-($valorColunaPivo))) + $vetor["l$i"]["$j"]);
 			}		
 		}
 	}
+
 	for ($i=0; $i < count($vetor["x0"]); $i++) {
 		$valorColunaPivo = $vetor["l$linhaZ"]["$pivoColuna"];
 		if ($valorColunaPivo != 0) {
@@ -197,8 +193,46 @@ while($continuar && $maximo < $limiteMaximo){
 	<?php var_dump($vetor); ?>
 <h1>Vetor Base</h1>	
 	<?=var_dump($base);?>
-<h1>Vetor Pivo</h1>	
 
+	<?php //recomendo utilizar a anotação <?= ? > para pegar os dados pra jogar na tabela ?>
+<h1>RESULTADO</h1>
+<h3>Tabela</h3>
+<?php 
+//exemplo, falta colocar os x1 x2... em cima da tabela nesse exemplo
+for ($i=0; $i < count($vetor["x0"]) - 1; $i++) { 
+	?>
+	<table>
+		<tr>
+		<td><?=$base["$i"]?></td>
+		<?php 
+			for ($j=0; $j < count($vetor["l0"]); $j++) { 
+				?>
+					<td><?=$vetor["l$i"]["$j"]?></td>
+				<?php
+			}
+		 ?>			
+		</tr>
+	</table>
+	<?php 
+}
+	for ($i=0; $i < count($vetor["x0"]) ; $i++) {
+	echo "linha $i </br>"; 
+		var_dump($vetor["l$i"]);
+	}
+ ?>
+<h3>Solução</h3>
+<?php 
+	for ($i=0; $i < count($vetor["x0"]) - 1; $i++) {
+	echo "$base[$i] :"; 
+		?>
+		<?=$vetor["l$i"]["$colunaB"]?>
+		<?php 
+	}
+	echo "Z :";
+	?>
+		<?=$vetor["l$linhaZ"]["$colunaB"]?>
+		<?php 
+ ?>
 </pre>
 
 </body>
