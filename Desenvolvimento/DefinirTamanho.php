@@ -4,6 +4,12 @@
 	<div class="container" >
 		<section class="tabelaRestricao">
 			<form method="POST" action="SimplexMaximizando.php" class="form-inline">
+				<select class="form-control" required="required" name="objetivo[]">\
+					<optgroup label="Objetivo é:">\
+						<option value="1">Maxmizar</option>\
+						<option value="2">Minimizar</option>\
+					</optgroup>\
+				</select>\
 				<?php
 				echo "Z = ";
 				for ($i=0; $i < $_POST["variaveis"]; $i++) {

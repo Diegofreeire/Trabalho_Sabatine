@@ -66,14 +66,26 @@ for ($i=0; $i < $tamanhoSolucao; $i++) {
 		}
 	}
 }
-//negativar a linha de Z
+
+
 
 $i;
 $linhaZ = $tamanhoLinha - 1;
+$min = 1;
+//caso minimizar, inverter solução
+if ($_POST['objetivo'] == 2) {
+		$min = -1;
+}
 
+for ($j=0 ; $j < count($vetor["l$linhaZ"])-1; $j++) {
+	$solucao["$j"] = $vetor["l$linhaZ"]["$j"] * $min;
+}
+
+//negativar a linha de Z
 for ($j=0; $j < count($vetor["l$linhaZ"])-1; $j++) { 
 	$vetor["l$linhaZ"]["$j"] = $vetor["l$linhaZ"]["$j"] * -1;
 }
+
 
 	for ($i=0; $i < count($vetor["l$linhaZ"]) - 1; $i++) { 
 		if($vetor["l$linhaZ"]["$i"] < 0){
@@ -83,8 +95,12 @@ for ($j=0; $j < count($vetor["l$linhaZ"])-1; $j++) {
 			$continuar = false;
 		}
 	}
+//realizar controle de limite
+$limiteMaximo = 20;
+$maximo = 0;
 
-while($continuar){
+//realizar um iteração no simplex
+while($continuar && $maximo < $limiteMaximo){
 	//pegar coluna do pivo
 	$a = $vetor["l$linhaZ"]["0"];
 
@@ -165,6 +181,7 @@ while($continuar){
 			$continuar = false;
 		}
 	}
+	$maximo++;
 }
 
  ?>
