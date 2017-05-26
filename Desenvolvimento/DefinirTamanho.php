@@ -13,15 +13,15 @@
 				<?php
 				echo "Z = ";
 				for ($i=0; $i < $_POST["variaveis"]; $i++) {
-						echo "<input type='text' class='form-control' name='x$i' id='x$i'>x$i ";
+						echo "<input type='number' class='form-control' required='required' name='x$i' id='x$i'>x$i ";
 				}
 				
 				echo "</br>Restrições :</br>";
 					for ($i=0; $i < $_POST["restricoes"]; $i++) {
 						for ($j=0; $j < $_POST["variaveis"]; $j++) {
-							echo "<input type='text' class='form-control' name='x$i$j'>x$j ";
+							echo "<input type='number' class='form-control' name='x$i$j'>x$j ";
 						}
-							echo "<= <input type='text' class='form-control' name='b$i' id='b$i' > </br>";
+							echo "<= <input type='number' class='form-control' required='required' name='b$i' id='b$i' > </br>";
 					}
 			 ?>
 			<input type="hidden" name="variaveis" value="<?=$_POST['variaveis']?>" class="variaveis">
