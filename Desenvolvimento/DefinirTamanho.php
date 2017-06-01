@@ -24,8 +24,8 @@
 							echo "<= <input type='number' class='form-control' required='required' name='b$i' id='b$i' > </br>";
 					}
 			 ?>
-			 <input type="hidden" name="direto" value="0">
-			<input type="checkbox" name="direto" value="1">
+			<input type="hidden" name="direto" value="0">
+			<input type="checkbox" name="direto" value="1"> Solução direta
 			<input type="hidden" name="variaveis" value="<?=$_POST['variaveis']?>" class="variaveis">
 			<input type="hidden" name="restricoes" value="<?=$_POST['restricoes']?>" class="restricoes1"> 
 			<input type="submit" name="" class="next">

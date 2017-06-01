@@ -231,8 +231,6 @@ while($continuar && ($maximo < $limiteMaximo)){
  ?>
  </table>
  </div>
-
-		
  	</div><?php 
  		}
 }
@@ -240,7 +238,8 @@ if ($maximo >= $limiteMaximo) {
 	echo "<h1>Solução Ilimitada</h1>";
 }?>
 
-<div class="container">
+<?php if (($_POST["direto"] == 1)): ?>
+	<div class="container">
 
 <h1>RESULTADO</h1>
 <h3>Tabela</h3>
@@ -287,9 +286,14 @@ if ($maximo >= $limiteMaximo) {
 
 		
  	</div>
+<?php endif ?>
+
+
+
 <div class="container">
 <h3>Solução</h3>
 		<?php 
+		//SOLUÇÃO
 		$existe;
  		$posicaoE;
  			for ($i=0; $i < count($vetor["l0"])-1; $i++) {
@@ -373,11 +377,6 @@ for ($i=0; $i < count($precoSombra); $i++) {
 	}
 
 }
-
-for ($i=0; $i < count($precoSombra); $i++) { 
-	# code...
-}
-
  ?>
 
 <div class="container">
