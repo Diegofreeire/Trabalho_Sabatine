@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <body>
+  		<div class="container">
+			<header id="header" class="">
+				<ul class="list-passos">
+					<li>
+						<span><a href="TelaPrincipal.html">Passo 1</a></span>
+					</li>
+					<li> 
+						<span><a href="DefinirTamanho.php">Passo 2</a></span>
+					</li>
+					<li>
+						<span><a href="">Passo 3</a></span>
+					</li>
+				</ul>
+			</header>
+		<!-- /header -->
+			<form class="form-control" action="DefinirTamanho.php" method="POST" accept-charset="utf-8">
+				<div class="RestriVars">
+					<label>
+						<span>*Variáveis : </span>
+						<input type="number" class="" name="variaveis" required='required' value="" placeholder="Variáveis" id="variaveis" >
+					</label>
+					<label>
+						<span>*Restrições : </span>
+						<input type="number" class="" name="restricoes" required='required'  value="" placeholder="Restrições" id="restricoes" >
+					</label>
+					<button type="submit" class="btn-enviar">Enviar</button>
+				</div>
+			</form>
+		</div>
+  </body> 
