@@ -4,12 +4,12 @@ version 1.1
 
 [Aplicação Persimplex Online](http://www.persimplex.esy.es/TelaPrincipal.html)
 
+### Integrantes
+5º semestre BSI
 * Diego Bellamino de Sá Freire RA: 548146
 * Matheus Moura Oliveira RA: 547735
 * Nathália Adriele de Lima RA: 547621
 * Samuel Seidjy Padovan RA: 548596
-
-### Integrantes
 
 ## Introdução
 Este documento provê uma visão geral da versão da aplicação Persimplex que está sendo liberada. Aqui descreveremos as funcionalidades do aplicativo, bem como seus problemas e limitações conhecidos. Por último são descritas as demandas e os problemas que foram resolvidos para liberação da versão atual.
