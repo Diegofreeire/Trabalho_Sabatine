@@ -4,6 +4,11 @@ version 1.1
 
 [Aplicação Persimplex Online](http://www.persimplex.esy.es/TelaPrincipal.html)
 
+* Diego Bellamino de Sá Freire RA: 548146
+* Matheus Moura Oliveira RA: 547735
+* Nathália Adriele de Lima RA: 547621
+* Samuel Seidjy Padovan RA: 548596
+
 ### Integrantes
 
 ## Introdução
