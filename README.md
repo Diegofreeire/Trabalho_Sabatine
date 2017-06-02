@@ -66,6 +66,6 @@ Nessa liberação foram contemplados os seguintes itens:
 
 | Código    | Título    | Tarefa    | Situação  |
 |:---------:|-----------|-----------|:---------:|
-| 1 | Passo a Passo    | ?    | Concluido |
-| 2 | Melhoria na Usabilidade   | ?   | Concluido |
-| 3 | Analise de Sensibilidade   | ?  | Concluido |
+| 1 | Passo a Passo    | Possibilitar o usuário vizualizar o metodo passo a passo    | Concluido |
+| 2 | Melhoria na Usabilidade   | Possibilitar que o usuário faça a inserção dos dados usando apenas o teclado.   | Concluido |
+| 3 | Analise de Sensibilidade   | Mostrar ao usuário a analise de sensibilidade  | Concluido |
