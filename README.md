@@ -47,7 +47,7 @@ Segue abaixo as datas importante do desenvolvimento:
 | Frameworks    | Bootstrap     |
 | Back-end  | PHP  |
 | IDE    | Sublime   |
-| Servidor  | Hotinger    |
+| Servidor  | Hostinger    |
 
 ## Procedimento e alteração de configuração do ambiente
 
