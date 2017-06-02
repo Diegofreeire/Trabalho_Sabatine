@@ -363,6 +363,7 @@ for ($i=0; $i < count($precoSombra); $i++) {
 		if ($precoSombra[$j] != 0) {
 			arsort($analiseSensibilidade[$j]);
 			for ($k=$qtdNaoBasicas; $k < count($vetor["l0"]) - 1; $k++) { 
+				$analiseSensibilidade[$j]["max"] = $analiseSensibilidade[$j][$k];
 				if ($analiseSensibilidade[$j][$k] > 0) {
 					$analiseSensibilidade[$j]["max"] = $analiseSensibilidade[$j][$k];
 			//		var_dump($analiseSensibilidade[$j]["max"]);
