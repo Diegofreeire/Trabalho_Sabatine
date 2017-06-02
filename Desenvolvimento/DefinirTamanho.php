@@ -9,7 +9,7 @@
 						<option value="1">Maxmizar</option>\
 						<option value="2">Minimizar</option>\
 					</optgroup>\
-				</select>\
+				</select>
 				<?php
 				echo "Z = ";
 				for ($i=0; $i < $_POST["variaveis"]; $i++) {
@@ -24,8 +24,11 @@
 							echo "<= <input type='number' class='form-control' required='required' name='b$i' id='b$i' > </br>";
 					}
 			 ?>
+			Quantidade máxima de iterações:
+			<input type="number" name="limitacao" value="20">
+			Solução direta: 
 			<input type="hidden" name="direto" value="0">
-			<input type="checkbox" name="direto" value="1"> Solução direta
+			<input type="checkbox" name="direto" value="1">
 			<input type="hidden" name="variaveis" value="<?=$_POST['variaveis']?>" class="variaveis">
 			<input type="hidden" name="restricoes" value="<?=$_POST['restricoes']?>" class="restricoes1"> 
 			<input type="submit" name="" class="next">

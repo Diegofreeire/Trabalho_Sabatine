@@ -105,7 +105,7 @@ for ($i=0; $i < count($vetor["l$linhaZ"]) - 1; $i++) {
 }
 
 //realizar controle de limite
-$limiteMaximo = 20;
+$limiteMaximo = $_POST["limitacao"];
 $maximo = 0;
 
 //realizar um iteração no simplex
@@ -191,7 +191,7 @@ while($continuar && ($maximo < $limiteMaximo)){
 		<div class="container espacamento">
 
 <h1>RESULTADO</h1>
-<h3>Tabela</h3>
+<h3>Tabela <?=$maximo?></h3>
 <div class="table-responsive">
 <table class="table">
 <tr>
