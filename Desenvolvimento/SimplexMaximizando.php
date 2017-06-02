@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php 
-include"TelaPrincipal.html";
+include"Principal.php";
 $vetor = array();
 $base = array();
 //pegar os valores das restrições, os valores das variáveis X
@@ -188,7 +188,7 @@ while($continuar && ($maximo < $limiteMaximo)){
 	$maximo++;
 	//---LEMBRAR DE MUDAR ESSA PARTE PARA ARRUMAR PASSO A PASSO---//
 	if (!($_POST["direto"] == 1)) {?>
-		<div class="container">
+		<div class="container espacamento">
 
 <h1>RESULTADO</h1>
 <h3>Tabela</h3>
@@ -196,7 +196,7 @@ while($continuar && ($maximo < $limiteMaximo)){
 <table class="table">
 <tr>
 	<td>Base</td>
-	?>
+	
 	<?php 
 	for ($j=0; $j < count($vetor["l0"])-1; $j++) { 
 	 	?>

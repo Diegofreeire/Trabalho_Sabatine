@@ -11,3 +11,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<body>
+	<header class="header">
+	<div class="container">
+		<a href="http://www.persimplex.esy.es/TelaPrincipal.html"><img src="logo.png.PNG" alt="" class="logo"></a>
+	</div>
+	</header>

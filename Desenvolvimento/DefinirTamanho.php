@@ -1,5 +1,5 @@
 <?php
-	include"TelaPrincipal.html";
+	include"Principal.php";
 ?>
 	<div class="container" >
 		<section class="tabelaRestricao">

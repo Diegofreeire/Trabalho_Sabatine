@@ -4,19 +4,34 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 #header{
-	margin:15px 0;
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+}
+#header a{
+	max-width: 80px;
+}
+#header a img.logo{
+	width: 100%;
 }
 .list-passos{
 	display: flex!important;
 	list-style: none!important;
 	justify-content: space-around!important;
 	padding:  0;
+	margin:  0;
+	width: 40%;
 }
 
 .list-passos li span a{
-	color: #555; 
+	color: #d4d4d4; 
 	font-size: 17px;
 	font-weight: 700;
+	text-decoration: none;
+}
+
+.main-form{
+	margin-top: 120px;
 }
 
 .RestriVars{
@@ -38,6 +53,7 @@ form.form-control input{
 	border-radius: 3px;
 	box-sizing: border-box;
 	padding: 0 0 0 15px;
+	 
 }
 .btn-enviar{
 	border: none;
@@ -58,7 +74,7 @@ form.form-control input{
 	border:  solid 1px #ccc;
 	border-radius:  4px;
 	padding: 15px;
-	margin: 15px 0;
+	margin: 150px 0 15px;
 }
 
 .tabelaRestricao form{
@@ -69,6 +85,7 @@ form.form-control input{
 
 .tabelaRestricao form input{
 	margin:  10px 2px;
+	max-width: 253px!important;
 }
 
 .back{
@@ -99,7 +116,25 @@ form.form-control input{
 	letter-spacing: 1.5px;
 }
 
+.header{
+	background: #262728;
+	box-shadow: 0px 5px 10px #263A28;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+}
 
+.header img{
+	display: block;
+	margin:  0 auto;
+	outline: none;
+	width: 10%;
+}
+
+.espacamento{
+	padding-top: 125px;
+}
 
 /*colocar TODO O CSS ANTES DO WEB-KIT*/
 input[type="text"]::-webkit-input-placeholder{
