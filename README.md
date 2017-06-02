@@ -38,7 +38,7 @@ Segue abaixo as datas importante do desenvolvimento:
 | Requisitos    | Ferramentas   |
 |---------------|---------------|
 | Navegadores   | Google Chrome, Mozilla Firefox, Opera, Safari, Microsoft Edge e Internet Explorer 9+.     |
-| Sistemas Operacionais     | UNIX, Windows, Android, IOS    |
+| Sistemas Operacionais     | UNIX, Windows, Android e IOS.    |
 
 | Tecnologias   | Descrição |
 |:-------------:|-----------|
