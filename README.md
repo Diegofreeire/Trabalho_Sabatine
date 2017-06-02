@@ -59,7 +59,7 @@ Segue abaixo as datas importante do desenvolvimento:
 
 ## Procedimento e alteração de configuração do ambiente
 
-?
+Para alteração alteração no ambiente é preciso possuir uma conta FTP no Hostinger e o FileZilla, conectar pelo FileZilla utilizando as credênciais criadas no Hostinger e enviar os arquivos.
 
 ## Atividades realizadas no período
 Nessa liberação foram contemplados os seguintes itens:
