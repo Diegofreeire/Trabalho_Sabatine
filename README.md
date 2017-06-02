@@ -26,7 +26,7 @@ O Simplex é uma técnica utilizada para se determinar numericamente, uma soluç
 * Analise de Sensibilidade.
 
 ## Problemas conhecidos e limitações
-* O resultado pode ser impreciso quando é utilizado valores altos.
+* A aplicação aceita apenas valores inteiros de entrada.
 
 ## Datas Importantes
 Segue abaixo as datas importante do desenvolvimento:
@@ -66,7 +66,6 @@ Nessa liberação foram contemplados os seguintes itens:
 
 | Código    | Título    | Tarefa    | Situação  |
 |:---------:|-----------|-----------|:---------:|
-| 1 | ?    | ?    | ? |
-| 2 | ?   | ?   | ? |
-| 3 | ?   | ?  | ? |
-| 4 | ...     | ...     | ...     |
+| 1 | Passo a Passo    | ?    | Concluido |
+| 2 | Melhoria na Usabilidade   | ?   | Concluido |
+| 3 | Analise de Sensibilidade   | ?  | Concluido |
