@@ -53,7 +53,6 @@ Segue abaixo as datas importante do desenvolvimento:
 | Front-end | HTML, CSS, JavaScript |
 | Back-end  | PHP, JavaScript  |
 | Frameworks    | Bootstrap     |
-| Back-end  | PHP  |
 | IDE    | Sublime   |
 | Servidor  | Hostinger    |
 
