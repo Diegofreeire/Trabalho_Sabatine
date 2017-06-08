@@ -2,7 +2,7 @@
 
 version 1.1
 
-[Aplicação Persimplex Online](http://www.persimplex.esy.es/TelaPrincipal.php)
+[Aplicação Persimplex Online](http://www.persimplex.esy.es)
 
 ### Integrantes
 5º semestre BSI
