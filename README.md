@@ -27,6 +27,7 @@ O Simplex é uma técnica utilizada para se determinar numericamente, uma soluç
 
 ## Problemas conhecidos e limitações
 * A aplicação aceita apenas valores inteiros de entrada.
+* Resoluções recomendadas maiores que 600x400
 
 ## Datas Importantes
 Segue abaixo as datas importante do desenvolvimento:
